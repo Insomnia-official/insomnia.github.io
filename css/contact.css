@@ -1,0 +1,97 @@
+/* Gemeinsame Stilregeln */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #beb6b6; */
+    background: linear-gradient(to left, #beb6b6, #f1f1f1);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(to right, #a33131, #ffffff);
+    color: #000000;
+    padding: 11px;
+    text-align: center;
+    border-bottom: #000000 3px solid;
+    border-left: #000000 3px solid;
+    border-right: #000000 3px solid;
+}
+
+nav {
+    background: linear-gradient(to right, #a33131, #ffffff);
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom: #000000 3px solid;
+    border-right: #000000 3px solid;
+    border-left: #000000 3px solid;
+}
+.fa-instagram, .fa-envelope {
+    color: #000000;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background: linear-gradient(to right, #a33131, #ffffff);
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: #000000 3px solid;
+    border-bottom: none;
+}
+
+.instagram, .mail {
+    border: 3px solid #000000;
+    background: linear-gradient(to top, #a33131, #ffffff);
+    padding: 20px;
+    width: 200px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 100px auto 30px; /* 100px Abstand nach oben, auto für zentrierte Positionierung horizontal, 30px Abstand nach unten */
+    margin-left: 800px; /* Verschiebt das Element um 800px nach rechts */
+}
+
+a:link {
+    color: inherit; /* Erbt die Farbe vom übergeordneten Element */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+/* Besuchte Links */
+a:visited {
+    color: inherit; /* Erbt die Farbe vom übergeordneten Element */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Media Query für Mobilgeräte */
+@media only screen and (max-width: 600px) {
+    .instagram, .mail {
+        width: calc(100% - 70px); /* 100% Breite minus 40px (Padding) */
+        margin: 40px auto; /* Zentriert das Element vertikal und horizontal */
+        margin-left: 10; /* Setzt den horizontalen Abstand zurück */
+    }
+}
