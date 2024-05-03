@@ -90,7 +90,7 @@ a:visited {
 /* Media Query für Mobilgeräte */
 @media only screen and (max-width: 500px) {
     .instagram, .mail {
-        width: calc(100% - 70px); /* 100% Breite minus 40px (Padding) */
+        width: calc(100% - 170px); /* 100% Breite minus 40px (Padding) */
         margin: 40px auto; /* Zentriert das Element vertikal und horizontal */
         margin-left: 10; /* Setzt den horizontalen Abstand zurück */
     }
