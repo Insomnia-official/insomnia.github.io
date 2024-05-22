@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Melden</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="icons/css/all.min.css">
+    <link rel="stylesheet" href="css/extra.css">
+    <script defer src="script.js"></script>
+</head>
+<script>
+    function sendMessage() {
+        const webhookURL = 'https://discord.com/api/webhooks/1242868366922874992/h693TnCppxLZ9jhlJb4LGztqmSTo7adVQa2fqSoek5zxO6P6WvKOQVDBR2_681m0jF9a'; // Ersetze diesen Platzhalter durch deine Webhook-URL
+        const message = document.getElementById('message').value;
+
+        if (!message) {
+            alert('Bitte gib eine Nachricht ein.');
+            return;
+        }
+
+        const userId = '1077249631077007470'; // Ersetze diesen Platzhalter durch die Benutzer-ID, die du pingen möchtest
+
+        const embed = {
+            title: "Ein Bug wurde gemeldet",
+            description: message,
+            color: 3447003, // Blaue Farbe, du kannst jede Hex-Farbe hier verwenden
+            timestamp: new Date(),
+            footer: {
+                text: "Gesendet von Insomnia"
+            }
+        };
+
+        const payload = {
+            content: `<@${userId}>`, // Ping the user
+            embeds: [embed]
+        };
+
+        fetch(webhookURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Danke für die hilfe, dein Bug Report wurde an den zuständigen Entwickler weitergegeben!');
+            } else {
+                alert('Fehler beim Senden der Nachricht.');
+            }
+        })
+        .catch(error => {
+            console.error('Fehler:', error);
+            alert('Fehler beim Senden der Nachricht.');
+        });
+    }
+</script>
+<body>
+    <header>
+        <h1>Bug Melden</h1>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fa-solid fa-backward"></i> </a>
+    </nav>
+    
+    <div class="container">
+        <h1>Bug Melden</h1>
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="message">
+                <label class="mdl-textfield__label" for="message">Gib deine Nachricht ein</label>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--icon" onclick="sendMessage()">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+    
+
+
+</body>
+</html>
