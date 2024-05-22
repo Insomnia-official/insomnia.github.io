@@ -24,7 +24,16 @@ header {
 .fa-mobile {
     color: #000000;
 }
+a:link {
+    color: inherit; /* Erbt die Farbe vom übergeordneten Element */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
 
+/* Besuchte Links */
+a:visited {
+    color: inherit; /* Erbt die Farbe vom übergeordneten Element */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
 nav {
     background: linear-gradient(to right, #a33131, #ffffff); /* Rot nach Weiß Farbverlauf von links nach rechts */
     color: #000000;

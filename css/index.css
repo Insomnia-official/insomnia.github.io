@@ -94,4 +94,72 @@ a:visited {
         margin: 100px auto; /* Zentriert das Element vertikal und horizontal */
         margin-left: 10; /* Setzt den horizontalen Abstand zurück */
     }
+
+    .container {
+        max-width: 100px;
+    }
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 100 auto;
+    padding: 20px;
+    background: linear-gradient(to left, #beb6b6, #f1f1f1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: #000000 1px solid;
+    border-radius: 10px;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    color: #000000;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    background: linear-gradient(to right, #a33131, #ffffff);
+    border-radius: 5px;
+    position: relative;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.button:hover {
+    background-color: #218838;
+}
+.tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the text */
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }

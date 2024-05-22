@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #beb6b6; */
+    background: linear-gradient(to left, #beb6b6, #f1f1f1);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+header {
+    background: linear-gradient(to right, #a33131, #ffffff);
+    color: #000000;
+    padding: 11px;
+    text-align: center;
+    border: #000000 3px solid;
+    border-top: none;
+}
+.fa-backward {
+    color: #000000;
+}
+nav {
+    background: linear-gradient(to right, #a33131, #ffffff);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: #000000 3px solid;
+    border-top: none;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+section {
+    padding: 20px;
+}
+footer {
+    background: linear-gradient(to right, #a33131, #ffffff);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bio-bild {
+    border: 3px solid #000000;
+    background: linear-gradient(to top, #a33131, #ffffff);
+    padding: 20px;
+    color: #000000;
+    width: 320px; /* Breite erhöht auf 300px */
+    border-radius: 20px;
+    text-align: center;
+    margin: 100px auto 10px; /* 100px Abstand nach oben, auto für zentrierte Positionierung horizontal, 30px Abstand nach unten */
+    margin-left: 750px; /* Verschiebt das Element um 700px nach rechts */
+}
+.bild-soon {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media Query für Handys */
+@media only screen and (max-width: 600px) {
+    header, nav, footer, .bio-bild {
+        padding-left: 00; /* Padding links auf 0 setzen */
+        padding-right: 0; /* Padding rechts auf 0 setzen */
+    }
+
+    .bio-bild {
+        margin-left: 50px; /* Margin links auf 10px setzen */
+        margin-right: 10px; /* Margin rechts auf 10px setzen */
+    }
+}
